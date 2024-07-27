@@ -2,100 +2,146 @@
 
 ## Description
 
-The Personal-Financial-Management Application is a C++ program designed to keep a detailed record of personal income and expenses. It leverages advanced Object-Oriented Programming (OOP) concepts to model financial entries and provides an intuitive user interface to manage the diary efficiently.
+The Personal Financial Management System is a C++ project designed to help users manage and track their financial activities. It leverages object-oriented programming principles to handle various aspects of financial management, such as annotations, daily logs, and financial records. The system is structured to provide a clean and efficient way to maintain financial information, ensuring data integrity and ease of use.
 
 ## Project Structure
 
 ```
 FinancialManagement/
-├── src/
+│
+├── anotacion/
 │   ├── anotacion.cpp
 │   ├── anotacion.h
+│
+├── dia/
 │   ├── dia.cpp
 │   ├── dia.h
+│
+├── dietario/
 │   ├── dietario.cpp
 │   ├── dietario.h
+│
+├── documentacion.pdf
+├── fecha/
 │   ├── fecha.cpp
 │   ├── fecha.h
-│   ├── main.cpp
+│
+├── main.cpp
+├── menu/
 │   ├── menu.cpp
-│   └── menu.h
-├── doc/
-│   └── documentation.pdf
+│   ├── menu.h
+│
 ├── Proyecto1.pro
 ├── Proyecto1.pro.user
 ├── Proyecto1_es_ES.ts
-├── .gitignore
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
-- **`src/`**: Contains the project's source files.
-  - `anotacion.cpp` and `anotacion.h`: Define the `Anotacion` class to handle individual diary entries.
-  - `dia.cpp` and `dia.h`: Define the `Dia` class which groups entries by date.
-  - `dietario.cpp` and `dietario.h`: Implement the `Dietario` class, managing the collection of days with their entries.
-  - `fecha.cpp` and `fecha.h`: Include the `Fecha` class to handle the dates of the entries.
-  - `main.cpp`: Contains the main function of the program.
-  - `menu.cpp` and `menu.h`: Implement the `Menu` class, providing an interface for user interaction.
-- **`doc/`**: Contains the project documentation.
-  - `documentation.pdf`: PDF file with the complete project documentation.
-- **`Proyecto1.pro`**: Project file for the development environment.
-- **`Proyecto1.pro.user`**: User-specific project file.
-- **`Proyecto1_es_ES.ts`**: Translation file.
-- **`.gitignore`**: Specifies files and directories for Git to ignore.
-- **`README.md`**: This file, containing project documentation.
+## Objectives
 
-## Requirements
+- Implement a financial management system using C++.
+- Apply object-oriented programming principles to manage financial data.
+- Ensure data integrity and provide a user-friendly interface for managing financial records.
 
-- **C++ Compiler** compatible with C++11 or later.
-- **Qt Framework** (optional, if using Qt Creator).
+## Tools and Technologies
 
-## Compilation and Execution
+- **Classes and Objects**: Defined various classes to manage different aspects of the financial system.
+- **Constructors and Destructors**: Proper memory management for dynamic data.
+- **Operator Overloading**: Implemented for intuitive data operations.
+- **Dynamic Memory**: Managed using pointers and dynamic allocation.
 
-1. **Clone the repository:**
+## Detailed Description
 
-   ```bash
-   git clone https://github.com/your-username/diet-management.git
-   cd diet-management
-   ```
+### anotacion
 
-2. **Compile the project:**
+Contains the implementation for managing annotations related to financial entries:
 
-   If you are using an environment like Qt Creator, simply open the `Proyecto1.pro` file and build the project. Alternatively, you can compile it manually using `g++`:
+- **Attributes**: Stores information about financial annotations.
+- **Methods**: Methods for creating, editing, and displaying annotations.
 
-   ```bash
-   g++ src/*.cpp -o diet_management
-   ```
+### dia
 
-3. **Run the program:**
+Contains the implementation for managing daily financial logs:
 
-   ```bash
-   ./diet_management
-   ```
+- **Attributes**: Stores daily financial entries.
+- **Methods**: Methods for adding, editing, and displaying daily logs.
 
-## Usage
+### dietario
 
-Once the program is running, an interactive menu will be displayed with the following options:
+Contains the implementation for the overall financial management system:
 
-1. **Add Entry:** Allows you to add a new entry to the diary.
-2. **Show Diary:** Displays all the entries recorded so far.
-3. **Delete Diary:** Deletes all entries from the diary.
-4. **Exit:** Terminates the program.
+- **Attributes**: Combines daily logs and annotations.
+- **Methods**: Methods for managing the entire financial system.
 
-## Main Classes
+### fecha
 
-- **`Anotacion`**: Represents an individual entry with a concept and amount.
-- **`Dia`**: Groups entries under a specific date.
-- **`Dietario`**: Manages the collection of days with their entries.
-- **`Fecha`**: Handles the dates of the entries.
-- **`Menu`**: Provides the user interface for interacting with the diary.
+Contains the implementation for handling date-related data:
+
+- **Attributes**: Stores and manages date information.
+- **Methods**: Methods for date validation and manipulation.
+
+### menu
+
+Contains the implementation for the user interface menu:
+
+- **Attributes**: Stores menu options and commands.
+- **Methods**: Methods for displaying and handling menu interactions.
+
+### main.cpp
+
+- The main entry point for the project. It initializes the financial management system and handles user interactions.
 
 ## Documentation
 
-The complete project documentation can be found in the [documentation.pdf](doc/documentation.pdf) file.
+Refer to the `documentacion.pdf` for detailed insights into the project, including:
+
+- **Introduction and Objectives**
+- **Detailed Class Descriptions**
+- **Code Examples and Explanations**
+- **Testing and Validation Procedures**
+- **Use Cases and Applications**
+
+## Compilation and Execution
+
+To compile and run the project, ensure you have a compatible C++ compiler installed. Use the following commands:
+
+```bash
+# Navigate to the project directory
+cd FinancialManagement
+
+# Compile the main file along with other source files
+g++ main.cpp anotacion/anotacion.cpp dia/dia.cpp dietario/dietario.cpp fecha/fecha.cpp menu/menu.cpp -o FinancialManagement
+
+# Run the executable
+./FinancialManagement
+```
+
+## Usage
+
+1. **Initialization**: Initialize the financial management system.
+2. **Menu Navigation**: Use the menu to add, edit, and display financial entries and annotations.
+3. **Data Management**: Ensure data is correctly entered and managed for accurate financial tracking.
+
+## Testing
+
+Various test cases are provided in the documentation and within the source files to validate the functionality of the financial management system. These include:
+
+- **Unit Tests**: For individual class methods and operations.
+- **Integration Tests**: For overall functionality and combined operations.
+- **Edge Cases**: Handling special scenarios and inputs.
 
 ## Contributing
 
-Contributions are welcome. Please fork the repository, make your changes, and submit a pull request with a detailed description of your modifications.
+If you want to contribute to the project, please follow these steps:
+
+1. **Fork the Repository**: Create a fork of the repository on GitHub.
+2. **Clone the Repository**: Clone the forked repository to your local machine.
+3. **Create a Branch**: Create a new branch for your feature or bugfix.
+4. **Make Changes**: Implement your changes and improvements.
+5. **Test**: Thoroughly test your changes.
+6. **Commit and Push**: Commit your changes and push to your forked repository.
+7. **Submit a Pull Request**: Create a pull request to the original repository.
 
 ## License
 
