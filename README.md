@@ -7,7 +7,7 @@ The Personal-Financial-Management Application is a C++ program designed to keep 
 ## Project Structure
 
 ```
-DietManagement/
+FinancialManagement/
 ├── src/
 │   ├── anotacion.cpp
 │   ├── anotacion.h
